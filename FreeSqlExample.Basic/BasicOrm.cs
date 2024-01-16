@@ -9,7 +9,7 @@ namespace FreeSqlExample.Basic
                $@"Data Source=49.234.11.101;Database={DatabaseName};User ID=sa;Password=yf1987416;";
 
         /// <summary>
-        /// 连接字符串如果不指定数据库名称，可能会在master数据库中创建表
+        /// 连接字符串如果不指定数据库名称，默认会在master数据库中创建表
         /// </summary>
         public const string DatabaseName = "FreeSqlDatabase";
 
@@ -31,7 +31,7 @@ namespace FreeSqlExample.Basic
         private static void CreateDatabase()
         {
             // 设置连接字符串，连接到 SQL Server 实例的默认数据库（通常是 master）
-            string connectionString = "Server=49.234.11.101;Integrated Security=True;";
+            string connectionString = "Server=49.234.11.101;User ID=sa;Password=yf1987416;";
             string dbName = DatabaseName;
             // 定义检查数据库是否存在的 SQL 命令
             string checkDatabaseExistsSql = $"SELECT database_id FROM sys.databases WHERE name = @dbName;";
