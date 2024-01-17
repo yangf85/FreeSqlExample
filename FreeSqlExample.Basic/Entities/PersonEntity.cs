@@ -8,8 +8,8 @@ namespace FreeSqlExample.Basic.Entities
         Female,
     }
 
-    [Table(Name = nameof(Person))]
-    public class Person
+    [Table(Name = nameof(PersonEntity))]
+    public class PersonEntity
     {
         [Column(Position = 4)]
         public int Age { get; set; } = Random.Shared.Next(1, 36);

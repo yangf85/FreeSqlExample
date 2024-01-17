@@ -20,8 +20,12 @@ namespace FreeSqlExample.Basic
             CreateDatabase();
             Orm = new FreeSqlBuilder()
                       .UseConnectionString(DataType.SqlServer, ConnectionString, null)
-                      .UseMonitorCommand(cmd => Console.WriteLine($"Sql：{cmd.CommandText}"))//监听SQL语句
-                      .UseAutoSyncStructure(true) //自动同步实体结构到数据库，FreeSql不会扫描程序集，只有CRUD时才会生成表。
+                      .UseMonitorCommand(cmd =>
+                     {
+                         Console.WriteLine("");
+                         Console.WriteLine($"Sql：{cmd.CommandText}");//监听SQL语句
+                     })
+                      //.UseAutoSyncStructure(true) //自动同步实体结构到数据库，FreeSql不会扫描程序集，只有CRUD时才会生成表。
                       .Build();
         }
 
@@ -62,10 +66,19 @@ namespace FreeSqlExample.Basic
                     }
                     else
                     {
-                        Console.WriteLine($"数据库 '{dbName}' 已存在。");
+                        //Console.WriteLine($"数据库 '{dbName}' 已存在。");
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// 清除特定表的数据
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        public static void ClearTableData<T>() where T : class
+        {
+            Orm.Delete<T>().Where("1=1").ExecuteAffrows();
         }
     }
 }
