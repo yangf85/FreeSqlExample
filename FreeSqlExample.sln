@@ -7,13 +7,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSqlExample.Basic", "Fre
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSqlExample.Lesson01_CRUD", "FreeSqlExample.Lesson01_CRUD\FreeSqlExample.Lesson01_CRUD.csproj", "{E14FE8C7-AF89-4305-B350-52BC1F2A9304}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeSqlExample.Lesson02_DbFirst", "FreeSqlExample.Lesson02_DbFirst\FreeSqlExample.Lesson02_DbFirst.csproj", "{8EB8073D-2A92-4627-A86A-4F14EA9F3CF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSqlExample.Lesson02_DbFirst", "FreeSqlExample.Lesson02_DbFirst\FreeSqlExample.Lesson02_DbFirst.csproj", "{8EB8073D-2A92-4627-A86A-4F14EA9F3CF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeSqlExample.Lesson03_CodeFirst", "FreeSqlExample.Lesson03_CodeFirst\FreeSqlExample.Lesson03_CodeFirst.csproj", "{BF8E24B7-9C7D-4212-BEDD-4B8608D138DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSqlExample.Lesson03_CodeFirst", "FreeSqlExample.Lesson03_CodeFirst\FreeSqlExample.Lesson03_CodeFirst.csproj", "{BF8E24B7-9C7D-4212-BEDD-4B8608D138DB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeSqlExample.Lesson04_Query", "FreeSqlExample.Lesson04_Query\FreeSqlExample.Lesson04_Query.csproj", "{D194A170-9EBB-4CBF-BC6A-2D9208ED850F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSqlExample.Lesson04_Query", "FreeSqlExample.Lesson04_Query\FreeSqlExample.Lesson04_Query.csproj", "{D194A170-9EBB-4CBF-BC6A-2D9208ED850F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeSqlExample.Lesson05_BaseEntity", "FreeSqlExample.Lesson05_BaseEntity\FreeSqlExample.Lesson05_BaseEntity.csproj", "{96C246C6-ECA2-4CDE-9781-F16CF869EB82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSqlExample.Lesson05_BaseEntity", "FreeSqlExample.Lesson05_BaseEntity\FreeSqlExample.Lesson05_BaseEntity.csproj", "{96C246C6-ECA2-4CDE-9781-F16CF869EB82}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSqlExample.Lesson06_Repository", "FreeSqlExample.Lesson06_Repository\FreeSqlExample.Lesson06_Repository.csproj", "{05F7817B-C7BE-4900-89D1-1AB41B78D86F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSqlExample.Lesson07_Transcation", "FreeSqlExample.Transcation\FreeSqlExample.Lesson07_Transcation.csproj", "{4B85EC51-FD5C-4296-B699-0694AE99601E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSqlExample.Lesson08_Filter", "FreeSqlExample.Lesson08_Filter\FreeSqlExample.Lesson08_Filter.csproj", "{9A6EE348-130A-4F1F-963A-42AA015B04E9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{96C246C6-ECA2-4CDE-9781-F16CF869EB82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96C246C6-ECA2-4CDE-9781-F16CF869EB82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96C246C6-ECA2-4CDE-9781-F16CF869EB82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05F7817B-C7BE-4900-89D1-1AB41B78D86F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05F7817B-C7BE-4900-89D1-1AB41B78D86F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05F7817B-C7BE-4900-89D1-1AB41B78D86F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05F7817B-C7BE-4900-89D1-1AB41B78D86F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B85EC51-FD5C-4296-B699-0694AE99601E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B85EC51-FD5C-4296-B699-0694AE99601E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B85EC51-FD5C-4296-B699-0694AE99601E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B85EC51-FD5C-4296-B699-0694AE99601E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A6EE348-130A-4F1F-963A-42AA015B04E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A6EE348-130A-4F1F-963A-42AA015B04E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A6EE348-130A-4F1F-963A-42AA015B04E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A6EE348-130A-4F1F-963A-42AA015B04E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

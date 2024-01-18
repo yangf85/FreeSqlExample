@@ -14,7 +14,7 @@ namespace FreeSqlExample.Basic.Entities
         [Column(Position = 1, IsPrimary = true, IsIdentity = true)]
         public int Id { get; set; }
 
-        [Column(Position = 2, DbType = "varchar(128) NOT NULL")]
+        [Column(Position = 2)]
         public string Name { get; set; }
 
         [Navigate(nameof(UserEntity.CompanyId))]
