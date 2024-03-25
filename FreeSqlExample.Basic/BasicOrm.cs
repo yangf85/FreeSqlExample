@@ -5,13 +5,13 @@ namespace FreeSqlExample.Basic
 {
     public class BasicOrm
     {
-        private const string ConnectionString =
-               $@"Data Source=(localdb)\MSSQLLocalDB;Database={DatabaseName};User ID=sa;Password=yf1987416;";
-
         /// <summary>
         /// 连接字符串如果不指定数据库名称，默认会在master数据库中创建表
         /// </summary>
         public const string DatabaseName = "FreeSqlDatabase";
+
+        private const string ConnectionString =
+                       $@"Data Source=(localdb)\MSSQLLocalDB;Database={DatabaseName};User ID=sa;Password=yf1987416;";
 
         public static IFreeSql Orm { get; private set; }
 
@@ -25,8 +25,17 @@ namespace FreeSqlExample.Basic
                          Console.WriteLine("");
                          Console.WriteLine($"Sql：{cmd.CommandText}");//监听SQL语句
                      })
-                      //.UseAutoSyncStructure(true) //自动同步实体结构到数据库，FreeSql不会扫描程序集，只有CRUD时才会生成表。
+                      .UseAutoSyncStructure(true) //自动同步实体结构到数据库，FreeSql不会扫描程序集，只有CRUD时才会生成表。
                       .Build();
+        }
+
+        /// <summary>
+        /// 清除特定表的数据
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        public static void ClearTableData<T>() where T : class
+        {
+            Orm.Delete<T>().Where("1=1").ExecuteAffrows();
         }
 
         /// <summary>
@@ -70,15 +79,6 @@ namespace FreeSqlExample.Basic
                     }
                 }
             }
-        }
-
-        /// <summary>
-        /// 清除特定表的数据
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        public static void ClearTableData<T>() where T : class
-        {
-            Orm.Delete<T>().Where("1=1").ExecuteAffrows();
         }
     }
 }
