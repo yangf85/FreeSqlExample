@@ -8,16 +8,31 @@ BaseEntity.Initialization(BasicOrm.Orm, null);
 BasicOrm.Orm.CodeFirst.SyncStructure<AuthorEntity>();
 BasicOrm.ClearTableData<AuthorEntity>();
 
-//应用全局过滤器
-BasicOrm.Orm.GlobalFilter.Apply<AuthorEntity>("filter01", a => a.IsDeleted);
+BasicOrm.Orm.GlobalFilter.Remove("IsDeleted");//移除过滤器
 
-var author1 = new AuthorEntity();
-author1.Name = "李白";
-author1.IsDeleted = true;
-var author2 = new AuthorEntity();
-author2.Name = "王维";
+BasicOrm.Orm.Delete<Fruit>().Where("1=1").ExecuteAffrows();//删除全部
+var list = BasicOrm.Orm.Select<Fruit>().ToList();
+var count = list.Count;//0个
 
-author1 = author1.Insert();
-author2 = author2.Insert();
+BasicOrm.Orm.GlobalFilter.Apply<ISoftDelete>("IsDeleted", a => a.IsDeleted == false); //应用全局过滤器
 
-var list = BasicOrm.Orm.Select<AuthorEntity>().ToList();
+var fruit1 = new Fruit() { Name = "苹果" };
+var fruit2 = new Fruit() { Name = "梨子" };
+var fruit3 = new Fruit() { Name = "香蕉" };
+var fruit4 = new Fruit() { Name = "西瓜" };
+BasicOrm.Orm.Insert(fruit1).ExecuteAffrows();
+BasicOrm.Orm.Insert(fruit2).ExecuteAffrows();
+BasicOrm.Orm.Insert(fruit3).ExecuteAffrows();
+BasicOrm.Orm.Insert(fruit4).ExecuteAffrows();
+
+//软删除
+list = BasicOrm.Orm.Select<Fruit>().ToList();
+count = list.Count;//4个
+BasicOrm.Orm.Update<Fruit>(list[0]).Set(f => f.IsDeleted, true).ExecuteAffrows(); //软删除
+
+list = BasicOrm.Orm.Select<Fruit>().ToList();
+count = list.Count;//3个
+
+BasicOrm.Orm.GlobalFilter.Remove("IsDeleted");//移除过滤器
+list = BasicOrm.Orm.Select<Fruit>().ToList();
+count = list.Count;//4个
