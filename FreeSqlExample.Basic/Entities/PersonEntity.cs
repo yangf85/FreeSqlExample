@@ -10,11 +10,8 @@ namespace FreeSqlExample.Basic.Entities
         Female,
     }
 
-    public class PersonEntity
+    public class PersonEntity : BasicEntity
     {
-        [Column(IsPrimary = true, IsIdentity = true)]
-        public int Id { get; set; }
-
         [Column(Position = 4)]
         public int Age { get; set; } = Random.Shared.Next(1, 36);
 
@@ -23,6 +20,11 @@ namespace FreeSqlExample.Basic.Entities
 
         [Column(Position = 2)]
         public string Name { get; set; }
+
+        public int DepartmentId { get; set; }
+
+        [Navigate(nameof(DepartmentId))]
+        public Department Department { get; set; }
 
         [Navigate(nameof(Id))]
         public OrderEntity Order { get; set; }

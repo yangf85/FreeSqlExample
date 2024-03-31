@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace FreeSqlExample.Basic.Entities
 {
-    public class Fruit : ISoftDelete
+    public class Department : BasicEntity
     {
-        [Column(IsPrimary = true, IsIdentity = true)]
-        public int Id { get; set; }
-
         public string Name { get; set; }
 
-        public bool IsDeleted { get; set; }
+        [Navigate(nameof(PersonEntity.DepartmentId))]
+        public List<PersonEntity> Persons { get; set; }
     }
 }

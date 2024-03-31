@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace FreeSqlExample.Basic.Entities
 {
-    public class OrderEntity
+    public class OrderEntity : BasicEntity
     {
         [Column(IsPrimary = true)]
-        public int Id { get; set; }
+        public override int Id { get; set; }
 
         public string Number { get; set; }
 
