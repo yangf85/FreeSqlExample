@@ -12,10 +12,10 @@ var rep2 = BasicOrm.Orm.GetRepository<OrderEntity>();
 var rep3 = BasicOrm.Orm.GetRepository<SummaryEntity>();
 var rep4 = BasicOrm.Orm.GetRepository<PartEntity>();
 
-rep1.Select.ToDelete().Where("1=1").ExecuteAffrows();
-rep2.Select.ToDelete().Where("1=1").ExecuteAffrows();
-rep3.Select.ToDelete().Where("1=1").ExecuteAffrows();
-rep4.Select.ToDelete().Where("1=1").ExecuteAffrows();
+//rep1.Select.ToDelete().Where("1=1").ExecuteAffrows();
+//rep2.Select.ToDelete().Where("1=1").ExecuteAffrows();
+//rep3.Select.ToDelete().Where("1=1").ExecuteAffrows();
+//rep4.Select.ToDelete().Where("1=1").ExecuteAffrows();
 
 Sample1();
 //Sample2();
