@@ -88,7 +88,7 @@ internal class Program
 
         using (var uw = BasicOrm.Orm.CreateUnitOfWork())
         {
-            rep.UnitOfWork = uw;//绑定工作单元
+            rep.UnitOfWork = uw;//绑定工作单元 如果不绑定直接使用，没效果
 
             var person2 = new PersonEntity();
             person2.Name = "温青青";
