@@ -5,13 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <AssemblyVersion>1.24.4.0</AssemblyVersion>
-    <FileVersion>1.24.4.0</FileVersion>
   </PropertyGroup>
-
-  <ItemGroup>
-    <PackageReference Include="FreeSql.Extensions.AggregateRoot" Version="3.2.820" />
-  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\FreeSqlExample.Basic\FreeSqlExample.Basic.csproj" />

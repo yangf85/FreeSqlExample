@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSqlExample.Lesson09_Aop
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSqlExample.Lesson11_MapType", "FreeSqlExample.Lesson11_MapType\FreeSqlExample.Lesson11_MapType.csproj", "{4D127CD2-D5E6-437C-BCF4-0CF3223FC133}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeSqlExample.Lesson12_Cascading", "FreeSqlExample.Lesson12_Cascading\FreeSqlExample.Lesson12_Cascading.csproj", "{104A08B1-78B0-458C-8CC2-F73D75341234}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FreeSqlExample.Lesson12_Cascading", "FreeSqlExample.Lesson12_Cascading\FreeSqlExample.Lesson12_Cascading.csproj", "{104A08B1-78B0-458C-8CC2-F73D75341234}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FreeSqlExample.Lesson13_ManyToMany", "FreeSqlExample.Lesson13_ManyToMany\FreeSqlExample.Lesson13_ManyToMany.csproj", "{EC5FCC6F-F3C4-49BD-A3A5-8E3EDA17FE4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{104A08B1-78B0-458C-8CC2-F73D75341234}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{104A08B1-78B0-458C-8CC2-F73D75341234}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{104A08B1-78B0-458C-8CC2-F73D75341234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC5FCC6F-F3C4-49BD-A3A5-8E3EDA17FE4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC5FCC6F-F3C4-49BD-A3A5-8E3EDA17FE4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC5FCC6F-F3C4-49BD-A3A5-8E3EDA17FE4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC5FCC6F-F3C4-49BD-A3A5-8E3EDA17FE4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
