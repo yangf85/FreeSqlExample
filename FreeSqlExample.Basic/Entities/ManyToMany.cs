@@ -38,5 +38,7 @@ namespace FreeSqlExample.Basic.Entities
         public int PartId { get; set; }
 
         public virtual Part Part { get; set; }
+
+        public int ShippedPiece { get; set; }
     }
 }
